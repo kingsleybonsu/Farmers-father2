@@ -3,10 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Farmers Father | Connecting Farmers to Buyers</title>
-
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Farmers Father | Connecting Farmers to Buyers Locally</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
 
   <body class="bg-gray-50 text-gray-800">
@@ -15,10 +13,14 @@
       <nav
         class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"
       >
+        <label type="checkbox" id="menu-toggle"></label>
+        <label for="menu-toggle" class="menu-icon">☰</label>
         <h1 class="text-xl font-bold text-green-700">Farmers Father</h1>
         <div class="space-x-4 text-sm font-medium">
           <a href="browse.html" class="hover:text-green-600">Browse Produce</a>
           <a href="sell.html" class="hover:text-green-600">Sell Produce</a>
+          <a href="about.html">About</a>
+          <a href="index.html">Home</a>
         </div>
       </nav>
     </header>
@@ -162,7 +164,9 @@
     <!-- FOOTER -->
     <footer class="bg-gray-800 text-white py-6">
       <div class="max-w-7xl mx-auto px-4 text-center text-sm">
-        <p>Farmers Father — Built to support farmers in Ghana 🇬🇭</p>
+        <p>
+          Farmers Father — Built to support farmers and everyone in Ghana 🇬🇭
+        </p>
       </div>
     </footer>
   </body>
