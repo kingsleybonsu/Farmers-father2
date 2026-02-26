@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farmers-Father Registration selectsection</title>
+    <link rel="stylesheet" href="registration style.css" />
+  </head>
+  <body>
+    <a href="browse.html">HOME</a>
+    <!--registration selectsection-->
+    <div class="container">
+      <h1>Registration Form</h1>
+      <h3>
+        please provide your details and make payment to get yourself registerd
+      </h3>
+      <form id="registration-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="location">location:</label>
+        <input type="location" id="location" name="location" required />
+
+        <label for="product-name">product-name:</label>
+        <input
+          type="product-name"
+          id="product-name"
+          placeholder="product"
+          name="product-name"
+          required
+        />
+
+        <label for="plan">Choose plan:</label>
+        <select id="plan">
+          <option value="basic"><h5>Basic (500/month)</h5></option>
+          <option value="premium"><h5>premium (1000/month)</h5></option>
+        </select>
+
+        <button type="submit">Register & pay</button>
+      </form>
+
+      <p class="login-text-section">
+        Already have an account? <a href="login.html">Login</a>
+      </p>
+    </div>
+    <script src="register.js"></script>
+  </body>
+</html>

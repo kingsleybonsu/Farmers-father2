@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sell Produce | Farmers Father</title>
-     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body class="bg-gray-50 text-gray-800">
     <!-- HEADER -->
@@ -92,6 +92,28 @@
           />
         </div>
 
+        <div>
+
+          <label class="block font-medium mb-1" for="email">Date</label>
+          <input
+            type="date"
+            placeholder="eg. bonsukingsley@gmail.com"
+            class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-600"
+          />
+
+        </div>
+
+        <div>
+
+          <label class="block font-medium mb-1" for="email">Email</label>
+          <input
+            type="text"
+            placeholder="eg. bonsukingsley@gmail.com"
+            class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-600"
+          />
+
+        </div>
+
         <!-- SUBMIT -->
         <div>
           <button
@@ -110,58 +132,5 @@
         <p>Farmers Father — Helping farmers sell before food spoils 🇬🇭</p>
       </div>
     </footer>
-
-    <script>
-      // This makes the form "remember" what the farmer posts
-      const form = document.querySelector("form"); // Find the form
-
-      form.addEventListener("submit", function (e) {
-        e.preventDefault(); // stops the page from reloading
-
-        // Get what the farmer typed
-        const farmer =
-          form.querySelector('input[placeholder*="Kofi"]').value ||
-          "Unknown Farmer";
-        const produce =
-          form.querySelector('input[placeholder*="Tomatoes"]').value ||
-          "Unknown Produce";
-        const quantity =
-          form.querySelector('input[placeholder*="50"]').value ||
-          "Unknown Quantity";
-        const location =
-          form.querySelector('input[placeholder*="Ashanti"]').value ||
-          "Unknown Location";
-        const phone =
-          form.querySelector('input[placeholder*="024"]').value ||
-          "Unknown Phone";
-        const price =
-          form.querySelector('input[placeholder*="GHS"]').value || "";
-
-        // Make a produce item
-        const produceItem = {
-          farmer,
-          produce,
-          quantity,
-          location,
-          phone,
-          price,
-        };
-
-        // Get all saved produce from the browser
-        let produceList = JSON.parse(localStorage.getItem("produceList")) || [];
-
-        // Add the new produce
-        produceList.push(produceItem);
-
-        // Save it back in the browser
-        localStorage.setItem("produceList", JSON.stringify(produceList));
-
-        // Tell the farmer it's saved
-        alert("🌾 Your produce has been posted!");
-
-        // Clear the form so farmer can post again
-        form.reset();
-      });
-    </script>
   </body>
 </html>

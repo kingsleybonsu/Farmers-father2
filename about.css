@@ -46,16 +46,17 @@ body {
 }
 
 .nav-links .active {
-  border-bottom: 2px solid #9ae6b4;
+  border-bottom: 2px solid #9ae6;
 }
 
 
 /* Header */
 .header {
-  background-color: #2f855a;
+  /* background-color: linear-gradient( 135deg #166534 #15803d); */
+  background-color: #36926d;
   color: white;
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 24px 16px;
 }
 
 .header h1 {
@@ -78,7 +79,7 @@ body {
 }
 
 .section h2 {
-  color: #2f855a;
+  color: #3a8b63;
   margin-bottom: 0.5rem;
 }
 
@@ -89,7 +90,7 @@ ul {
 }
 
 li {
-  background: #e6fffa;
+  background: #387e70;
   margin: 0.5rem 0;
   padding: 0.75rem;
   border-left: 4px solid #2f855a;
@@ -188,8 +189,8 @@ li {
   }
 
   .nav-links {
-    display: none;
-    flex-direction: column;
+    display: flex;
+    /* flex-direction: column; */
     width: 100%;
     background-color: #22543d;
     padding: 1rem 0;
@@ -201,8 +202,7 @@ li {
   }
 
   /* Show menu when checkbox is checked */
-  #menu-toggle:checked + .menu-icon + .nav-links {
-    display: flex;
   }
-}
+
+
 

@@ -1,0 +1,11 @@
+.first-first{
+    color: green;
+    font-weight: 600;
+    justify-content: center;
+    display: flex;
+    border-radius: 0.5rem;
+    padding: 0.7rem 1.5rem;
+    margin: 2rem 0;
+
+
+}
