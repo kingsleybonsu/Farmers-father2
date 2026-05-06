@@ -1,130 +1,89 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Browse Produce | Farmers Father</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- i connected about.css and it  didn't help-->
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Browse Produce | Farmers Father</title>
+  <link rel="stylesheet" href="browse.css">
+</head>
 
-  <body class="bg-gray-50 text-gray-800">
-    <!-- HEADER -->
-    <header class="bg-white shadow-sm">
-      <nav
-        class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"
-      >
-        <label type="checkbox" id="menu-toggle"></label>
-        <label for="menu-toggle" class="menu-icon">☰</label>
-        <a href="index.html" class="text-xl font-bold text-green-700">
-          Farmers Father
-        </a>
-        <a href="sell.html" class="text-sm text-gray-600 hover:text-green-600">
-          Sell Produce
-        </a>
-      </nav>
-    </header>
+<body>
 
-    <!-- PAGE TITLE -->
-    <section class="max-w-7xl mx-auto px-4 py-10 text-center">
-      <h1 class="text-3xl font-bold mb-2">Browse Available Produce</h1>
-      <p class="text-gray-600">Fresh produce directly from local farmers.</p>
-    </section>
-
-    <!-- PRODUCE LIST -->
-    <section id="card" class="max-w-7xl mx-auto px-4 pb-16">
-      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <!-- PRODUCE CARD -->
-        <div class="bg-white border rounded-lg p-4">
-          <h3 class="font-bold text-lg">Tomatoes</h3>
-          <p>"Listed on:"</p>
-          <time datetime="2026-01-02">1 febuary 2026</time>
-          <p class="text-sm text-gray-600">50 crates • Ashanti Region</p>
-          <p class="text-sm mt-1">Farmer: Kofi Mensah</p>
-
-          <div class="mt-4 flex gap-2">
-            <a
-              href="tel:0535901446"
-              class="bg-green-600 text-white px-3 py-2 rounded text-sm"
-            >
-              Call
-            </a>
-            <a
-              href="https://wa.me/233535901446"
-              class="border border-green-600 text-green-600 px-3 py-2 rounded text-sm"
-            >
-              WhatsApp
-            </a>
-          </div>
-        </div>
-
-        <div class="bg-white border rounded-lg p-4">
-          <h3 class="font-bold text-lg">Plantain</h3>
-          <p class="text-sm text-gray-600">100 bunches • Eastern Region</p>
-          <p class="text-sm mt-1">Farmer: Ama Boateng</p>
-          <p>"Listed on:"</p>
-          <time datetime="2026-01-02">1 febuary 2026</time>
-          <div class="mt-4 flex gap-2">
-            <a
-              href="tel:0535901446"
-              class="bg-green-600 text-white px-3 py-2 rounded text-sm"
-            >
-              Call
-            </a>
-            <a
-              href="https://wa.me/233535901446"
-              class="border border-green-600 text-green-600 px-3 py-2 rounded text-sm"
-            >
-              WhatsApp
-            </a>
-          </div>
-        </div>
-
-        <div class="bg-white border rounded-lg p-4">
-          <h3 class="font-bold text-lg">Pepper</h3>
-          <p class="text-sm text-gray-600">30 bags • Volta Region</p>
-          <p class="text-sm mt-1">Farmer: Kwame Agyei</p>
-          <p>"Listed on:"</p>
-          <time datetime="2026-01-02">1 febuary 2026</time>
-          <div class="mt-4 flex gap-2">
-            <a
-              href="tel:0535901446"
-              class="bg-green-600 text-white px-3 py-2 rounded text-sm"
-            >
-              Call
-            </a>
-            <a
-              href="https://wa.me/233535901446"
-              class="border border-green-600 text-green-600 px-3 py-2 rounded text-sm"
-            >
-              WhatsApp
-            </a>
-          </div>
-        </div>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container nav">
+      <h1 class="logo">Farmers Father</h1>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="sell.html">Sell Produce</a>
       </div>
+    </div>
+  </header>
 
-      <div class="mt-4 flex gap-3">
-        <a
-          href="tel:0535901446"
-          class="flex-1 bg-green-600 text-white py-3 rounded text-center font-semibold"
-        >
-          📞 Call Farmer
-        </a>
+  <!-- TITLE -->
+  <section class="title container">
+    <h2>Browse Available Produce</h2>
+    <p>Fresh produce directly from local farmers</p>
+  </section>
 
-        <a
-          href="https://wa.me/233535901446"
-          class="flex-1 border border-green-600 text-green-700 py-3 rounded text-center font-semibold"
-        >
-          💬 WhatsApp
-        </a>
+  <!-- PRODUCTS -->
+  <section class="container grid">
+
+    <!-- CARD -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1542838132-92c53300491e" alt="Tomatoes">
+
+      <h3>Tomatoes</h3>
+      <p class="meta">50 crates • Ashanti Region</p>
+      <p class="farmer">Farmer: Kofi Mensah</p>
+
+      <time>Listed: 1 February 2026</time>
+
+      <div class="actions">
+        <a href="tel:233535901446" class="btn call">Call</a>
+        <a href="https://wa.me/233535901446?text=Hello%20I%20want%20to%20buy%20your%20Tomatoes" target="_blank" class="btn whatsapp">WhatsApp</a>
       </div>
-    </section>
+    </div>
 
-    <!-- FOOTER -->
-    <footer class="bg-gray-800 text-white py-6">
-      <div class="max-w-7xl mx-auto px-4 text-center text-sm">
-        <p>Farmers Father — Connecting farmers to buyers across Ghana 🇬🇭</p>
+    <!-- CARD -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1582284540020-8acbe03f4924" alt="Pepper">
+      <h3>Plantain</h3>
+      <p class="meta">100 bunches • Eastern Region</p>
+      <p class="farmer">Farmer: Ama Boateng</p>
+      <time>Listed: 1 February 2026</time>
+      <div class="actions">
+        <a href="tel:233535901446" class="btn call">Call</a>
+        <a href="https://wa.me/233535901446?text=Hello%20I%20want%20to%20buy%20your%20Plantain"
+           target="_blank"
+           class="btn whatsapp">WhatsApp</a>
       </div>
-    </footer>
-  </body>
+    </div>
+
+    <!-- CARD -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1582284540020-8acbe03f4924" alt="Pepper">
+
+      <h3>Pepper</h3>
+      <p class="meta">30 bags • Volta Region</p>
+      <p class="farmer">Farmer: Kwame Agyei</p>
+
+      <time>Listed: 1 February 2026</time>
+
+      <div class="actions">
+        <a href="tel:233535901446" class="btn call">Call</a>
+        <a href="https://wa.me/233535901446?text=Hello%20I%20want%20to%20buy%20your%20Pepper"
+           target="_blank"
+           class="btn whatsapp">WhatsApp</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Farmers Father — Connecting farmers to buyers 🇬🇭</p>
+  </footer>
+
+</body>
 </html>

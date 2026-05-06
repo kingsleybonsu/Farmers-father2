@@ -1,137 +1,83 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sell Produce | Farmers Father</title>
-    <link rel="stylesheet" href="sell.css">
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
-  </head>
-  <body class="bg-gray-50 text-gray-800">
-    <!-- HEADER -->
-    <header class="bg-white shadow-sm">
-      <nav
-        class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"
-      >
-        <a href="index.html" class="text-xl font-bold text-green-700">
-          Farmers Father
-        </a>
-        <a href="index.html" class="text-sm text-gray-600 hover:text-green-600">
-          Back to Home
-        </a>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sell Produce | Farmers Father</title>
+  <link rel="stylesheet" href="sell.css">
+</head>
 
-    <!-- PAGE TITLE -->
-    <section class="max-w-2xl mx-auto px-4 py-10 text-center">
-      <h1 class="text-3xl font-bold mb-2">Sell Your Produce</h1>
-      <p class="text-gray-600">
-        List your farm produce and connect directly with buyers.
-      </p>
-    </section>
+<body>
 
-    <!-- FORM -->
-    <section class="max-w-2xl mx-auto px-4 pb-16">
-      <form class="bg-white p-6 rounded-lg shadow space-y-5">
-        <!-- Farmer Name -->
-        <div>
-          <label class="block font-medium mb-1">Farmer Name</label>
-          <input
-            type="text"
-            placeholder="e.g. Kofi Mensah"
-            class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-600"
-          />
-        </div>
+  <!-- HEADER -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="index.html" class="logo">Farmers Father</a>
+      <a href="index.html" class="back-link">Back to Home</a>
+    </nav>
+  </header>
 
-        <!-- Produce Name -->
-        <div>
-          <label class="block font-medium mb-1">Produce Name</label>
-          <input
-            type="text"
-            placeholder="e.g. Tomatoes"
-            class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-600"
-          />
-        </div>
+  <!-- PAGE TITLE -->
+  <section class="page-title container">
+    <h1>Sell Your Produce</h1>
+    <p>List your farm produce and connect directly with buyers.</p>
+  </section>
 
-        <!-- Quantity -->
-        <div>
-          <label class="block font-medium mb-1">Quantity</label>
-          <input
-            type="text"
-            placeholder="e.g. 50 crates"
-            class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-600"
-          />
-        </div>
+  <!-- FORM -->
+  <section class="form-section container">
+    <form class="form">
 
-        <!-- Location -->
-        <div>
-          <label class="block font-medium mb-1">Location</label>
-          <input
-            type="text"
-            placeholder="e.g. Ashanti Region"
-            class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-600"
-          />
-        </div>
-
-        <!-- Phone Number -->
-        <div>
-          <label class="block font-medium mb-1">Phone / WhatsApp Number</label>
-          <input
-            type="tel"
-            placeholder="e.g. 0535901446"
-            class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-600"
-          />
-        </div>
-
-        <!-- Price (Optional) -->
-        <div>
-          <label class="block font-medium mb-1"> Price (optional) </label>
-          <input
-            type="text"
-            placeholder="e.g. GHS 200 per crate"
-            class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-600"
-          />
-        </div>
-
-        <div>
-
-          <label class="block font-medium mb-1" for="email">Date</label>
-          <input
-            type="date"
-            placeholder="eg. bonsukingsley@gmail.com"
-            class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-600"
-          />
-
-        </div>
-
-        <div>
-
-          <label class="block font-medium mb-1" for="email">Email</label>
-          <input
-            type="text"
-            placeholder="eg. bonsukingsley@gmail.com"
-            class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-600"
-          />
-
-        </div>
-
-        <!-- SUBMIT -->
-        <div>
-          <button
-            type="submit"
-            class="w-full bg-green-700 text-white py-3 rounded-lg font-semibold hover:bg-green-800 transition"
-          >
-            Submit Produce
-          </button>
-        </div>
-      </form>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="bg-gray-800 text-white py-6">
-      <div class="max-w-7xl mx-auto px-4 text-center text-sm">
-        <p>Farmers Father — Helping farmers sell before food spoils 🇬🇭</p>
+      <div class="form-group">
+        <label>Farmer Name</label>
+        <input type="text" placeholder="e.g. Kofi Mensah" />
       </div>
-    </footer>
-  </body>
+
+      <div class="form-group">
+        <label>Produce Name</label>
+        <input type="text" placeholder="e.g. Tomatoes" />
+      </div>
+
+      <div class="form-group">
+        <label>Quantity</label>
+        <input type="text" placeholder="e.g. 50 crates" />
+      </div>
+
+      <div class="form-group">
+        <label>Location</label>
+        <input type="text" placeholder="e.g. Ashanti Region" />
+      </div>
+
+      <div class="form-group">
+        <label>Phone / WhatsApp Number</label>
+        <input type="tel" placeholder="e.g. 0535901446" />
+      </div>
+
+      <div class="form-group">
+        <label>Price (optional)</label>
+        <input type="text" placeholder="e.g. GHS 200 per crate" />
+      </div>
+
+      <div class="form-group">
+        <label>Date</label>
+        <input type="date" />
+      </div>
+
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" placeholder="e.g. example@gmail.com" />
+      </div>
+
+      <button type="submit" class="btn-submit">
+        Submit Produce
+      </button>
+
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Farmers Father — Helping farmers sell before food spoils 🇬🇭</p>
+  </footer>
+
+</body>
 </html>
