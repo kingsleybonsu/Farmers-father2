@@ -4,86 +4,354 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Browse Produce | Farmers Father</title>
-  <link rel="stylesheet" href="browse.css">
+
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f6f8;
+      color: #222;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    /* HEADER */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    .logo {
+      font-weight: bold;
+      color: #166534;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .menu-icon {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    #menu-toggle {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .menu-icon {
+        display: block;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: white;
+        width: 200px;
+        flex-direction: column;
+        padding: 20px;
+        display: none;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      }
+
+      #menu-toggle:checked + .menu-icon + .nav-links {
+        display: flex;
+      }
+    }
+
+    /* TITLE */
+    .page-title {
+      text-align: center;
+      padding: 30px 0;
+    }
+
+    /* FILTERS */
+    .filters {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .filters input,
+    .filters select {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    /* CARD */
+    .card {
+      background: #fff;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    /* IMAGE */
+    .card-image {
+      position: relative;
+    }
+
+    .card-image img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    /* BADGES */
+    .badge {
+      position: absolute;
+      padding: 5px 10px;
+      font-size: 12px;
+      border-radius: 20px;
+      color: white;
+    }
+
+    .category {
+      top: 10px;
+      left: 10px;
+      background: #0a5cff;
+    }
+
+    .price {
+      top: 10px;
+      right: 10px;
+      background: #16a34a;
+    }
+
+    /* CONTENT */
+    .card-content {
+      padding: 15px;
+    }
+
+    .meta {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .farmer {
+      font-size: 13px;
+      margin-top: 5px;
+    }
+
+    /* ACTIONS */
+    .actions {
+      margin-top: 12px;
+      display: flex;
+      gap: 8px;
+    }
+
+    .btn {
+      flex: 1;
+      padding: 8px;
+      border-radius: 6px;
+      text-align: center;
+      font-size: 13px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .call {
+      background: #16a34a;
+      color: white;
+    }
+
+    .whatsapp {
+      border: 2px solid #16a34a;
+      color: #16a34a;
+    }
+
+    .delete {
+      background: red;
+      color: white;
+      flex: 0.5;
+    }
+
+    /* EMPTY */
+    .no-products {
+      text-align: center;
+      padding: 40px;
+      color: #777;
+    }
+
+    /* FOOTER */
+    .footer {
+      margin-top: 40px;
+      background: #1f2937;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container nav">
-      <h1 class="logo">Farmers Father</h1>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="sell.html">Sell Produce</a>
+<!-- HEADER -->
+<header class="container nav">
+  <h1 class="logo">Farmers Father</h1>
+
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="menu-icon">☰</label>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="sell.html">Sell</a>
+  </div>
+</header>
+
+<!-- TITLE -->
+<section class="page-title container">
+  <h1>Browse Available Produce</h1>
+  <p>Fresh produce directly from local farmers</p>
+</section>
+
+<!-- FILTERS -->
+<section class="container filters">
+  <input type="text" id="searchInput" placeholder="Search produce...">
+
+  <select id="filterCategory">
+    <option value="">All Categories</option>
+    <option value="Vegetables">Vegetables</option>
+    <option value="Fruits">Fruits</option>
+    <option value="Livestock">Livestock</option>
+  </select>
+
+  <select id="filterLocation">
+    <option value="">All Regions</option>
+    <option value="Ashanti">Ashanti</option>
+    <option value="Eastern">Eastern</option>
+    <option value="Volta">Volta</option>
+  </select>
+</section>
+
+<!-- PRODUCTS -->
+<section class="container">
+  <div id="productContainer" class="grid"></div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>Farmers Father — Connecting farmers to buyers across Ghana 🇬🇭</p>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+const container = document.getElementById("productContainer");
+const searchInput = document.getElementById("searchInput");
+const filterCategory = document.getElementById("filterCategory");
+const filterLocation = document.getElementById("filterLocation");
+
+let products = JSON.parse(localStorage.getItem("products")) || [];
+
+function displayProducts(items) {
+  container.innerHTML = "";
+
+  if (items.length === 0) {
+    container.innerHTML = `
+      <div class="no-products">
+        <h3>No products yet</h3>
+        <p>Be the first farmer to list produce 🌱</p>
       </div>
-    </div>
-  </header>
+    `;
+    return;
+  }
 
-  <!-- TITLE -->
-  <section class="title container">
-    <h2>Browse Available Produce</h2>
-    <p>Fresh produce directly from local farmers</p>
-  </section>
+  items.forEach((product, index) => {
+    const card = document.createElement("div");
+    card.className = "card";
 
-  <!-- PRODUCTS -->
-  <section class="container grid">
-
-    <!-- CARD -->
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1542838132-92c53300491e" alt="Tomatoes">
-
-      <h3>Tomatoes</h3>
-      <p class="meta">50 crates • Ashanti Region</p>
-      <p class="farmer">Farmer: Kofi Mensah</p>
-
-      <time>Listed: 1 February 2026</time>
-
-      <div class="actions">
-        <a href="tel:233535901446" class="btn call">Call</a>
-        <a href="https://wa.me/233535901446?text=Hello%20I%20want%20to%20buy%20your%20Tomatoes" target="_blank" class="btn whatsapp">WhatsApp</a>
+    card.innerHTML = `
+      <div class="card-image">
+        <img src="${product.image || 'https://via.placeholder.com/300'}" alt="${product.name}">
+        <span class="badge category">${product.category}</span>
+        <span class="badge price">${product.price || "N/A"}</span>
       </div>
-    </div>
 
-    <!-- CARD -->
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1582284540020-8acbe03f4924" alt="Pepper">
-      <h3>Plantain</h3>
-      <p class="meta">100 bunches • Eastern Region</p>
-      <p class="farmer">Farmer: Ama Boateng</p>
-      <time>Listed: 1 February 2026</time>
-      <div class="actions">
-        <a href="tel:233535901446" class="btn call">Call</a>
-        <a href="https://wa.me/233535901446?text=Hello%20I%20want%20to%20buy%20your%20Plantain"
-           target="_blank"
-           class="btn whatsapp">WhatsApp</a>
+      <div class="card-content">
+        <h3>${product.name}</h3>
+        <p class="meta">${product.quantity} • ${product.location}</p>
+        <p class="farmer">👨‍🌾 ${product.farmer}</p>
+
+        <div class="actions">
+          <a href="tel:${product.phone}" class="btn call">📞 Call</a>
+
+          <a href="https://wa.me/${product.phone}?text=Hello%20I%20want%20to%20buy%20your%20${product.name}"
+             target="_blank"
+             class="btn whatsapp">💬 WhatsApp</a>
+
+          <button class="btn delete" onclick="deleteProduct(${index})">🗑</button>
+        </div>
       </div>
-    </div>
+    `;
 
-    <!-- CARD -->
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1582284540020-8acbe03f4924" alt="Pepper">
+    container.appendChild(card);
+  });
+}
 
-      <h3>Pepper</h3>
-      <p class="meta">30 bags • Volta Region</p>
-      <p class="farmer">Farmer: Kwame Agyei</p>
+function deleteProduct(index) {
+  let products = JSON.parse(localStorage.getItem("products")) || [];
+  products.splice(index, 1);
+  localStorage.setItem("products", JSON.stringify(products));
+  location.reload();
+}
 
-      <time>Listed: 1 February 2026</time>
+function filterProducts() {
+  const search = searchInput.value.toLowerCase();
+  const category = filterCategory.value;
+  const location = filterLocation.value;
 
-      <div class="actions">
-        <a href="tel:233535901446" class="btn call">Call</a>
-        <a href="https://wa.me/233535901446?text=Hello%20I%20want%20to%20buy%20your%20Pepper"
-           target="_blank"
-           class="btn whatsapp">WhatsApp</a>
-      </div>
-    </div>
+  const filtered = products.filter(product => {
+    return (
+      product.name.toLowerCase().includes(search) &&
+      (category === "" || product.category === category) &&
+      (location === "" || product.location.toLowerCase().includes(location.toLowerCase()))
+    );
+  });
 
-  </section>
+  displayProducts(filtered);
+}
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>Farmers Father — Connecting farmers to buyers 🇬🇭</p>
-  </footer>
+displayProducts(products);
+
+searchInput.addEventListener("keyup", filterProducts);
+filterCategory.addEventListener("change", filterProducts);
+filterLocation.addEventListener("change", filterProducts);
+</script>
 
 </body>
 </html>

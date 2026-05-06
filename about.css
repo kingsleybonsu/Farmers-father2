@@ -204,5 +204,72 @@ li {
   /* Show menu when checkbox is checked */
   }
 
+  /*/////////////////////////////////*/
+  /* NAV BASE */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* NAV LINKS (DESKTOP) */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* HAMBURGER ICON */
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* HIDE CHECKBOX */
+#menu-toggle {
+  display: none;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 110px;
+    right: 0;
+    background: white;
+    width: 200px;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 8px;
+    display: none;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+
+  /* SHOW MENU WHEN CLICKED */
+  #menu-toggle:checked + .menu-icon + .nav-links {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+  }
+}
+
 
 

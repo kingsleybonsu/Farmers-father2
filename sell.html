@@ -2,82 +2,178 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sell Produce | Farmers Father</title>
   <link rel="stylesheet" href="sell.css">
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <nav class="nav container">
-      <a href="index.html" class="logo">Farmers Father</a>
-      <a href="index.html" class="back-link">Back to Home</a>
-    </nav>
-  </header>
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="container nav">
 
-  <!-- PAGE TITLE -->
-  <section class="page-title container">
-    <h1>Sell Your Produce</h1>
-    <p>List your farm produce and connect directly with buyers.</p>
-  </section>
+    <h1 class="logo">Farmers Father</h1>
 
-  <!-- FORM -->
-  <section class="form-section container">
-    <form class="form">
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">☰</label>
 
-      <div class="form-group">
-        <label>Farmer Name</label>
-        <input type="text" placeholder="e.g. Kofi Mensah" />
-      </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="browse.html">Browse</a>
+    </div>
 
-      <div class="form-group">
-        <label>Produce Name</label>
-        <input type="text" placeholder="e.g. Tomatoes" />
-      </div>
+  </div>
+</header>
 
-      <div class="form-group">
-        <label>Quantity</label>
-        <input type="text" placeholder="e.g. 50 crates" />
-      </div>
+<!-- ===== PAGE TITLE ===== -->
+<section class="page-title container">
+  <h1>Sell Your Produce</h1>
+  <p>List your farm produce and connect directly with buyers.</p>
+</section>
 
-      <div class="form-group">
-        <label>Location</label>
-        <input type="text" placeholder="e.g. Ashanti Region" />
-      </div>
+<!-- ===== FORM ===== -->
+<section class="form-section container">
+  <form class="form" id="sellForm">
 
-      <div class="form-group">
-        <label>Phone / WhatsApp Number</label>
-        <input type="tel" placeholder="e.g. 0535901446" />
-      </div>
+    <div class="form-group">
+      <label>Farmer Name</label>
+      <input type="text" id="farmer" required />
+    </div>
 
-      <div class="form-group">
-        <label>Price (optional)</label>
-        <input type="text" placeholder="e.g. GHS 200 per crate" />
-      </div>
+    <div class="form-group">
+      <label>Produce Name</label>
+      <input type="text" id="name" required />
+    </div>
 
-      <div class="form-group">
-        <label>Date</label>
-        <input type="date" />
-      </div>
+    <div class="form-group">
+      <label>Quantity</label>
+      <input type="text" id="quantity" required />
+    </div>
 
-      <div class="form-group">
-        <label>Email</label>
-        <input type="email" placeholder="e.g. example@gmail.com" />
-      </div>
+    <div class="form-group">
+      <label>Location</label>
+      <input type="text" id="location" required />
+    </div>
 
-      <button type="submit" class="btn-submit">
-        Submit Produce
-      </button>
+    <div class="form-group">
+      <label>Category</label>
+      <select id="category">
+        <option value="Vegetables">Vegetables</option>
+        <option value="Fruits">Fruits</option>
+        <option value="Livestock">Livestock</option>
+      </select>
+    </div>
 
-    </form>
-  </section>
+    <div class="form-group">
+      <label>Phone / WhatsApp Number</label>
+      <input type="tel" id="phone" required />
+    </div>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>Farmers Father — Helping farmers sell before food spoils 🇬🇭</p>
-  </footer>
+    <div class="form-group">
+      <label>Price</label>
+      <input type="text" id="price" placeholder="Optional" />
+    </div>
+
+    <div class="form-group">
+      <label>Date</label>
+      <input type="date" id="date" />
+    </div>
+
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" id="email" />
+    </div>
+
+    <!-- IMAGE UPLOAD -->
+    <div class="form-group">
+      <label>Upload Product Image</label>
+      <input type="file" id="image" accept="image/*" required />
+    </div>
+
+    <!-- IMAGE PREVIEW -->
+    <div class="image-preview">
+      <img id="preview" src="" alt="Preview" style="display:none;">
+    </div>
+
+    <button type="submit" class="btn-submit">
+      Submit Produce
+    </button>
+
+  </form>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <p>Farmers Father — Helping farmers sell before food spoils 🇬🇭</p>
+</footer>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+const form = document.getElementById("sellForm");
+const imageInput = document.getElementById("image");
+const preview = document.getElementById("preview");
+
+// ===== IMAGE PREVIEW =====
+imageInput.addEventListener("change", function() {
+  const file = this.files[0];
+
+  if (file) {
+    const reader = new FileReader();
+
+    reader.onload = function() {
+      preview.src = reader.result;
+      preview.style.display = "block";
+    };
+
+    reader.readAsDataURL(file);
+  }
+});
+
+// ===== FORM SUBMIT =====
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const file = imageInput.files[0];
+
+  if (!file) {
+    alert("Please upload an image");
+    return;
+  }
+
+  const reader = new FileReader();
+
+  reader.onload = function() {
+
+    const product = {
+      id: Date.now(), // unique ID
+      farmer: document.getElementById("farmer").value,
+      name: document.getElementById("name").value,
+      quantity: document.getElementById("quantity").value,
+      location: document.getElementById("location").value,
+      category: document.getElementById("category").value,
+      phone: document.getElementById("phone").value,
+      price: document.getElementById("price").value,
+      date: document.getElementById("date").value,
+      email: document.getElementById("email").value,
+      image: reader.result
+    };
+
+    let products = JSON.parse(localStorage.getItem("products")) || [];
+
+    products.push(product);
+
+    localStorage.setItem("products", JSON.stringify(products));
+
+    alert("✅ Product added successfully!");
+
+    form.reset();
+    preview.style.display = "none";
+  };
+
+  reader.readAsDataURL(file);
+});
+</script>
 
 </body>
 </html>
