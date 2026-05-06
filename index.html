@@ -1,199 +1,148 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Farmers Father | Connecting Farmers to Buyers Locally</title>
-    <link rel="stylesheet" href="index.css">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Farmers Father | Connecting Farmers to Buyers Locally</title>
+  <link rel="stylesheet" href="index.css">
   </head>
-
-  <body class="bg-gray-50 text-gray-800">
+  <body>
     <!-- NAVBAR -->
-    <header class="bg-white shadow-sm">
-      <nav
-        class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"
-      >
-        <label type="checkbox" id="menu-toggle"></label>
-        <label for="menu-toggle" class="menu-icon">☰</label>
-        <h1 class="text-xl font-bold text-green-700">Farmers Father</h1>
-        <div class="space-x-4 text-sm font-medium">
-          <a href="browse.html" class="hover:text-green-600">Browse Produce</a>
-          <a href="sell.html" class="hover:text-green-600">Sell Produce</a>
-          <a href="about.html">About</a>
-          <a href="index.html">Home</a>
-          
+   <header>
+     <nav class="container">
+      <h1>Farmers Father</h1>
+
+        <div class="hamburger" id="hamburger">
+          ☰
         </div>
+      
+
+
+      <div class="links" id="nav-links">
+        <!-- <a href="browse.html">Browse Produce</a> -->
+        <!-- <a href="sell.html">Sell Produce</a> -->
+        <a href="about.html">About</a>
+        <!-- <a href="index.html">Home</a> -->
+        <a href="dashboard.html">History</a>
+      </div>
       </nav>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="bg-green-700 text-white">
-      <div class="max-w-7xl mx-auto px-4 py-16 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">
-          Fresh Farm Produce.<br />
-          Sold Before It Spoils.
-        </h2>
-        <p class="text-lg mb-6">
-          Farmers Father connects local farmers directly to buyers — reducing
-          waste and increasing income.
-        </p>
+    <!-- HERO -->
 
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="sell.html"
-            class="bg-white text-green-700 px-6 py-3 rounded-lg font-semibold"
-          >
-            Sell Your Produce
-          </a>
+   <section class="hero">
+    <div class="container">
+      <h2>Fresh Farm Produce.<br>Just like Your Home Market. <br>Payless Sell All. </h2>
+      <p>Farmers Father connects local farmers directly to buyers — reducing waste and increasing income.</p>
 
-          <a
-            href="browse.html"
-            class="border border-white px-6 py-3 rounded-lg font-semibold"
-          >
-            Browse Produce
-          </a>
-          <a
-            href="registration.html"
-            class="border border-white px-6 py-3 rounded-lg font-semibold"
-          >
-            Get Registerd
-          </a>
-        </div>
+   <div class="hero-buttons">
+    <a href="sell.html" class="btn btn-primary">Sell Your Produce</a>
+    <a href="browse.html" class="btn btn-outline">Browse Produce</a>
+    <a href="registration.html" class="btn btn-outline">Get Registered</a>
+   </div>
+   </div>
+
+   </section>
+
+   <!-- PROBLEM & SOLUTION -->
+
+   <section class="section">
+    <div class="container grid grid-2">
+      <div>
+        <h3>The Problem</h3>
+        <p>Many farmers lose crops due to lack of access to buyers.</p>
       </div>
-    </section>
-    <!-- PROBLEM & SOLUTION -->
-    <section class="max-w-7xl mx-auto px-4 py-16">
-      <div class="grid md:grid-cols-2 gap-10">
-        <div>
-          <h3 class="text-2xl font-bold mb-4">The Problem</h3>
-          <p>
-            Many farmers lose crops due to lack of access to buyers. Food spoils
-            while people in cities need fresh local produce.
-          </p>
-        </div>
-        <div>
-          <h3 class="text-2xl font-bold mb-4">Our Solution</h3>
-          <p>
-            Farmers Father helps farmers list produce easily and connect
-            directly with restaurants, wholesalers, and households.
-          </p>
-        </div>
-        <div>
-          <h3 class="text-2xl font-bold mb-4">Transparency</h3>
-          <p>The app provides transparency in ensuring fair trade practices.</p>
-        </div>
-        <div>
-          <h3 class="text-2xl font-bold mb-4"></h3>
-        </div>
-        <div>
-          <h3 class="text-2xl font-bold mb-4">Other Matters</h3>
-          <p>
-            You can also choose to collaborate with our farmers by sending email
-            to our support team on:bonsukigsley90@gmail.com
-          </p>
-        </div>
-      </div>
-    </section>
 
-    <!-- FEATURED PRODUCE -->
-    <section class="bg-white py-16">
-      <div class="max-w-7xl mx-auto px-4">
-        <h3 class="text-2xl font-bold mb-8 text-center">Available Produce</h3>
+   <div>
+    <h3>Our Solution</h3>
+    <p>Farmers can list produce and connect directly with buyers.</p>
+   </div>
 
-        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <!-- CARD -->
-          <div class="border rounded-lg p-4">
-            <h4 class="font-bold text-lg">Fresh Tomatoes</h4>
-            <p class="text-sm text-gray-600">50 crates • Ashanti Region</p>
-            <div class="mt-4 flex gap-2">
-              <a
-                href="#"
-                class="bg-green-600 text-white px-3 py-2 rounded text-sm"
-              >
-                Call Farmer
-              </a>
-              <a
-                href="#"
-                class="border border-green-600 text-green-600 px-3 py-2 rounded text-sm"
-              >
-                WhatsApp
-              </a>
+   <div>
+    <h3>Transparency</h3>
+    <p>The app ensures fair trade practices.</p>
+   </div>
+
+   <div>
+    <h3>Other Matters</h3>
+    <p>Email: bonsukigsley90@gmail.com</p>
+   </div>
+   </div>
+
+
+   </section>
+
+   <!-- PRODUCE -->
+
+    <section class="section">
+      <div class="container">
+        <h3 style="text-align:center; margin-bottom:30px;">Available Produce</h3>
+
+
+        <div class="grid grid-3">
+          <div class="card">
+            <h4>Fresh Tomatoes</h4>
+            <p>50 crates • Ashanti Region</p>
+            <div class="card-actions">
+             <a href="tel:+233535901446" class="btn-small btn-green">Call Farmer</a>
+             <a href="https://wa.me/+233535901446" target="_blank" class="btn-small btn-outline-green">WhatsApp</a>
             </div>
           </div>
 
-          <div class="border rounded-lg p-4">
-            <h4 class="font-bold text-lg">Plantain</h4>
-            <p class="text-sm text-gray-600">100 bunches • Eastern Region</p>
-            <div class="mt-4 flex gap-2">
-              <a
-                href="#"
-                class="bg-green-600 text-white px-3 py-2 rounded text-sm"
-              >
-                Call Farmer
-              </a>
-              <a
-                href="#"
-                class="border border-green-600 text-green-600 px-3 py-2 rounded text-sm"
-              >
-                WhatsApp
-              </a>
-            </div>
-          </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1587049633312-d628ae50a8ae" alt="Plantain">
+        <h4>Plantain</h4>
+        <p>100 bunches • Eastern Region</p>
+        <div class="card-actions">
+        <a href="tel:+233535901446" class="btn-small btn-green">Call Farmer</a>
 
-          <div class="border rounded-lg p-4">
-            <h4 class="font-bold text-lg">Pepper</h4>
-            <p class="text-sm text-gray-600">30 bags • Volta Region</p>
-            <div class="mt-4 flex gap-2">
-              <a
-                href="#"
-                class="bg-green-600 text-white px-3 py-2 rounded text-sm"
-              >
-                Call Farmer
-              </a>
-              <a
-                href="#"
-                class="border border-green-600 text-green-600 px-3 py-2 rounded text-sm"
-              >
-                WhatsApp
-              </a>
-            </div>
-          </div>
-        </div>
+        <a href="https://wa.me/+233535901446" target="_blank" class="btn-small btn-outline-green">WhatsApp</a>
+       </div>
+       </div>
+
+       <div class="card">
+       <h4>Pepper</h4>
+       <p>30 bags • Volta Region</p>
+       <div class="card-actions">
+        <a href="tel:+233535901446" class="btn-small btn-green">Call Farmer</a>
+        <a href="https://wa.me/+233535901446" target="_blank" class="btn-small btn-outline-green">WhatsApp</a>
+       </div>
+       </div>
+
+       </div>
       </div>
     </section>
 
-     <div class="first-first">
-    <a href="registration.html" >Register</a>
-    </div>
+   <!-- HOW IT WORKS -->
 
-    <!-- HOW IT WORKS -->
-    <section class="max-w-7xl mx-auto px-4 py-16">
-      <h3 class="text-2xl font-bold text-center mb-8">How It Works</h3>
+    <section class="section">
+     <div class="container">
+       <h3 style="text-align:center; margin-bottom:30px;">How It Works</h3>
+       <div class="grid grid-3" style="text-align:center;">
 
-      <div class="grid md:grid-cols-3 gap-6 text-center">
         <div>
-          <h4 class="font-bold mb-2">1. List Produce</h4>
-          <p>Farmers add produce details in minutes.</p>
+          <h4>1. List Produce</h4>
+          <p>Farmers add produce quickly.</p>
         </div>
+
         <div>
-          <h4 class="font-bold mb-2">2. Get Contacted</h4>
-          <p>Buyers call or WhatsApp farmers directly.</p>
+          <h4>2. Get Contacted</h4>
+          <p>Buyers contact farmers directly.</p>
         </div>
-        <div>
-          <h4 class="font-bold mb-2">3. Sell Fast</h4>
-          <p>Produce is sold before it spoils.</p>
+
+          <div>
+           <h4>3. Sell Fast</h4>
+           <p>Produce is sold before it spoils.</p>
+          </div>
         </div>
       </div>
-    </section>
+   </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-gray-800 text-white py-6">
-      <div class="max-w-7xl mx-auto px-4 text-center text-sm">
-        <p>
-          Farmers Father — Built to support farmers and everyone in Ghana 🇬🇭
-        </p>
-      </div>
-    </footer>
+   <!-- FOOTER -->
+
+   <footer>
+     <p>Farmers Father — Built to support farmers in Ghana 🇬🇭</p>
+   </footer>
+
   </body>
 </html>

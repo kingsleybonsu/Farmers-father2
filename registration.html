@@ -7,33 +7,45 @@
     <link rel="stylesheet" href="registration style.css" />
   </head>
   <body>
-    <a href="browse.html">HOME</a>
+    <!-- <a href="browse.html">HOME</a> -->
     <!--registration selectsection-->
     <div class="container">
-      <h1>Registration Form</h1>
-      <h3>
+      <!-- <h1>Registration Form</h1> -->
+      <!-- <h3>
         please provide your details and make payment to get yourself registerd
-      </h3>
+      </h3> -->
       <form id="registration-form">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
+        <input type="text" id="name" placeholder="Enter your name.." name="name" required />
 
         <label for="location">location:</label>
-        <input type="location" id="location" name="location" required />
+        <select name="text" id="select">
+          <option>Ashanti Region</option>
+          <option>Greater Accra</option>
+          <option>Volta</option>
+          <option>Bono East</option>
+          <option>upper Eest</option>
+          <option>Central</option>
+          <option>Ahafo</option>
+          <option>Bono</option>
+          <option>Eastern</option>
+          <option>North East</option>
+          <option>Northern</option>
+          <option>Oti</option>
+          <option>Savannah</option>
+          <option>Upper West</option> 
+          <option>Western</option>
+          <option>Western Northern</option>
+        </select>
+        <input type="location" id="location" placeholder="Enter your Region name" name="location" required />
 
         <label for="product-name">product-name:</label>
-        <input
-          type="product-name"
-          id="product-name"
-          placeholder="product"
-          name="product-name"
-          required
-        />
+        <input type="product-name" id="product-name" placeholder="What do you produce" name="product-name" required/>
 
         <label for="plan">Choose plan:</label>
         <select id="plan">
-          <option value="basic"><h5>Basic (500/month)</h5></option>
-          <option value="premium"><h5>premium (1000/month)</h5></option>
+          <option value="basic"><h5>Basic (500 for 6 month)</h5></option>
+          <option value="premium"><h5>premium (1000 for a year)</h5></option>
         </select>
 
         <button type="submit">Register & pay</button>
@@ -42,6 +54,7 @@
       <p class="login-text-section">
         Already have an account? <a href="login.html">Login</a>
       </p>
+
     </div>
     <script src="register.js"></script>
   </body>
