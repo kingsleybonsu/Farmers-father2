@@ -110,6 +110,13 @@
 
 <!-- ===== JAVASCRIPT ===== -->
 <script>
+const farmerLoggedIn = localStorage.getItem("farmerLoggedIn");
+
+if (!farmerLoggedIn) {
+  alert("Please login as farmer first");
+  window.location.href = "farmer-login.html";
+}
+
 const form = document.getElementById("sellForm");
 const imageInput = document.getElementById("image");
 const preview = document.getElementById("preview");
