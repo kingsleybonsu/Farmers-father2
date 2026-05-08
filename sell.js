@@ -1,3 +1,16 @@
+const loggedIn =
+localStorage.getItem("farmerLoggedIn");
+
+if(!loggedIn){
+
+  alert("Please login as farmer first");
+
+  window.location.href =
+  "farmer-register.html";
+
+}
+
+
 const form = document.getElementById("sellForm");
 
 form.addEventListener("submit", function(e) {
