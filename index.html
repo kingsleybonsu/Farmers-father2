@@ -6,6 +6,7 @@
   <title>Farmers Father|index.html| Connecting Farmers to Buyers Locally</title>
   <link rel="stylesheet" href="index.css">
   </head>
+  <!-- <p></p> -->
   <body>
     <!-- NAVBAR -->
    <header class="header">
@@ -19,7 +20,7 @@
 
     <!-- NAV LINKS -->
     <div class="nav-links">
-      <a href="browse.html">Browse</a>
+      <a href="market.html">Browse</a>
       <!-- <a href="about.html">About Us</a> -->
       <a href="sell.html">Sell</a>
     </div>
@@ -37,7 +38,7 @@
    <div class="hero-buttons">
     <a href="farmer-register.html" class="btn btn-primary">Become a Farmer</a>
     <a href="buyer-register.html" class="btn btn-primary">Join as Buyer</a>
-    <a href="browse.html" class="btn btn-outline">Browse Produce</a>
+    <!-- <a href="market.html" class="btn btn-outline">Browse Produce</a> -->
     <!-- <a href="registration.html" class="btn btn-outline">Get Registered</a> -->
    </div>
    </div>
@@ -76,36 +77,57 @@
 
     <section class="section">
       <div class="container">
-        <h3 style="text-align:center; margin-bottom:30px;">Browse Through Our Produce</h3>
+       <h3 style="text-align:center; margin-bottom:30px;">
+  Explore Fresh Farm Produce
+</h3>
 
 
-        <div class="grid grid-3">
+       <div class="grid grid-3">
+
+  <div class="card">
+
+    <a href="market.html?category=Fruits">
+      <img src="https://images.unsplash.com/photo-1594057687713-5fd14eed1c17?q=80&w=327&auto=format&fit=crop" alt="Fruits">
+    </a>
+
+    <h4>Fruits and Vegetables</h4>
+
+    <div class="card-actions">
+      <a href="market.html?category=Fruits" class="btn-small btn-green">
+        Buy Fruits
+      </a>
+    </div>
+  </div>
+
           <div class="card">
-            <img src="https://images.unsplash.com/photo-1594057687713-5fd14eed1c17?q=80&w=327&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Fresh Tomatoes">
-            <h4>Fresh Tomatoes</h4>
-            <div class="card-actions">
-              <a href="browse.html" class="btn-small btn-green">Browse Produce</a>
-            </div>
-          </div>
 
-         <div class="card">
-          <img src="https://plus.unsplash.com/premium_photo-1663954864079-7452e284aeae?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Plantain">
-          <h4>Plantain</h4>
-         <div class="card-actions">
-           <a href="browse.html" class="btn-small btn-green">Browse Produce</a>
-         </div>
-         </div>
+    <a href="market.html?category=Tubers">
+      <img src="https://agrictoday.com.gh/wp-content/uploads/2021/11/tubers-of-yam.jpg" alt="Tubers">
+    </a>
 
-         <div class="card">
-         <img src="https://images.unsplash.com/photo-1567539549213-cc1697632146?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Pepper">
-         <h4>Pepper</h4>
-         <div class="card-actions">
-          <a href="browse.html" class="btn-small btn-green">Browse Produce</a>
-         </div>
-         </div>
+    <h4>Tuber Crops and Cereals</h4>
 
-          </div>
-        </div>
+    <div class="card-actions">
+      <a href="market.html?category=Tubers" class="btn-small btn-green">
+        Buy Tubers
+      </a>
+    </div>
+
+  </div>
+
+    <div class="card">
+     <a href="market.html?category=Livestock">
+      <img src="https://www.animalspot.net/wp-content/uploads/2019/07/Farm-Animals-Picture.jpg" alt="Livestock">
+      </a>
+      <h4>Livestock</h4>
+      <div class="card-actions">
+        <a href="market.html?category=Livestock" class="btn-small btn-green">
+        Buy Livestock
+        </a>
+      </div>
+    </div>
+
+</div>
     </section>
 
    <!-- HOW IT WORKS -->
@@ -143,14 +165,8 @@
 
       <main class="contain">
       <section class="images-section">
-        <img
-          src="https://www.ffa.org/wp-content/uploads/2022/06/WH1_6588.jpg"
-          alt="Local farmer with fresh produce"
-          loading="lazy"
-        />
-        <p class="image-caption">
-          Supporting local farmers and reducing food waste.
-        </p>
+        <img src="" alt="Local farmer with fresh produce"  loading="lazy" />
+        <p class="image-caption">Supporting local farmers and reducing food waste.</p>
       </section>
 
       <section class="section">
@@ -167,9 +183,29 @@
         <h2>Our Mission</h2>
         <p>
           To reduce food waste in villages by connecting farmers directly to
-          buyers using simple technology.
+          buyers using modern technology.
         </p>
       </section>
+
+      <section  class="contact">
+        <h2>Send Feedback</h2>
+        <h4>Share your thoughts , ideas or questions with us</h4>
+        <form id="contact-Us">
+
+          <div>
+         <label for="email">Your Email:</label>
+         <input type="email" id="email" placeholder="example@gmailcom" required>
+          </div>
+
+         <div>
+         <label for="message"> send Us Your massage or idea</label>
+         <textarea id="massage" name="message" placeholder="Write your Feedback , questions , or sugggestions..." required> </textarea>
+         </div>
+        <button type="submit">Send massage</button>
+        </form>
+      </section>
+
+
     </main>
 
    <!-- FOOTER -->
@@ -177,6 +213,6 @@
    <footer>
      <p>Farmers Father — Built to support farmers in Ghana 🇬🇭</p>
    </footer>
-
+ <script src="index.js"></script>
   </body>
 </html>

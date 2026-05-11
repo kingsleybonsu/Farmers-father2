@@ -15,6 +15,11 @@
       padding:20px;
     }
 
+    .home{
+      text-decoration: none;
+      color: gray;
+    }
+
     .container{
       position:relative;
       width:900px;

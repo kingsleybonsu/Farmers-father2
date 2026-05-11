@@ -30,8 +30,8 @@ body {
 
 /* NAVBAR */
 header {
-  background: var(--white);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  background: #166534;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 nav {
@@ -47,20 +47,20 @@ nav h1 {
   color: var(--green-700);
 }
 
-nav .links {
+.nav-links {
   display: flex;
   gap: 20px;
-  font-size: 14px;
 }
 
-nav a {
+.nav-links a {
   text-decoration: none;
-  color: black;
-  font-weight: 700;
+  color: white;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
-nav a:hover {
-  color: var(--green-600);
+.nav-links a:hover {
+  color: #bbf7d0;
 }
 
 .hamburger{
@@ -70,20 +70,37 @@ nav a:hover {
 }
 
 /* HERO */
+/* HERO SECTION */
+
 .hero {
-  background: var(--green-700);
-  color: var(--white);
+  position: relative;
+  background:
+  linear-gradient(rgba(0,0,0,0.55),
+  rgba(0,0,0,0.55)),
+  url("https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1600&auto=format&fit=crop");
+  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: white;
   text-align: center;
-  padding: 80px 20px;
+  padding: 140px 20px;
 }
 
 .hero h2 {
-  font-size: 32px;
-  margin-bottom: 16px;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  line-height: 1.3;
+  font-weight: bold;
 }
 
 .hero p {
-  margin-bottom: 24px;
+  max-width: 700px;
+  margin: auto;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  color: #f3f4f6;
 }
 
 .hero-buttons {
@@ -94,21 +111,32 @@ nav a:hover {
 }
 
 .btn {
-  padding: 12px 24px;
-  border-radius: 8px;
+  padding: 14px 28px;
+  border-radius: 10px;
   font-weight: bold;
   text-decoration: none;
   display: inline-block;
+  transition: 0.3s ease;
 }
 
 .btn-primary {
-  background: var(--white);
-  color: var(--green-700);
+  background: #16a34a;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #15803d;
+  transform: translateY(-3px);
 }
 
 .btn-outline {
-  border: 2px solid var(--white);
-  color: var(--white);
+  border: 2px solid white;
+  color: white;
+}
+
+.btn-outline:hover {
+  background: white;
+  color: #166534;
 }
 
 /* GRID */
@@ -127,32 +155,36 @@ nav a:hover {
 
 /* SECTION */
 .section {
-  padding: 60px 0;
+  padding: 40px 0;
 }
 
 /* CARDS */
 .card {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 16px;
+  border-radius: 16px;
+  overflow: hidden;
   background: white;
-  transition: 1.5s;
+  transition: 0.4s;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
+
 .card:hover{
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
 }
 
 .card img {
   width: 100%;
-  height: 160px;
+  height: 120px;
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 10px;
-  transition: scale(0.04s);
+  transition: 0.04s;
+  transform: scale(1.05);
 }
 
 .card h4 {
+  text-decoration: none;
+  color: black;
   font-size: 18px;
   margin-bottom: 6px;
 }
@@ -211,22 +243,6 @@ footer {
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     /* display: none; */
   }
-/* 
-  .links.active {
-    display: flex; 
-  }
-
-  .hamburger.active span:nth-child(1){
-    transform: rotate(45deg) translateY(8px);
-  }
-
-  .hamburger.active span:nth-child(2){
-    opacity: 0;
-  }
-
-  .hamburger.active span:nth-child(1){
-    transform: rotate(45deg) translateY(-8px);
-  } */
 }
 
 /* TABLET + DESKTOP */
@@ -260,19 +276,12 @@ footer {
 
 .logo {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 24px;
+  color: white;
 }
 
 /* NAV LINKS (DESKTOP) */
-.nav-links {
-  display: flex;
-  gap: 20px;
-}
 
-.nav-links a {
-  text-decoration: none;
-  color: #333;
-}
 
 /* HAMBURGER ICON */
 .menu-icon {
@@ -366,4 +375,60 @@ li{
   padding: 0.75rem;
   border-left: 4px solid var(--gray-500);
   
+}
+
+/*///////massaging area/*/
+/* FEEDBACK SECTION */
+
+.contact {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  margin-top: 50px;
+}
+
+.contact h2 {
+  margin-bottom: 10px;
+}
+
+.contact h4 {
+  margin-bottom: 30px;
+  color: #555;
+}
+
+#contact-Us {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#contact-Us input,
+#contact-Us textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 15px;
+}
+
+#contact-Us textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+#contact-Us button {
+  background: #16a34a;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#contact-Us button:hover {
+  background: #15803d;
 }
