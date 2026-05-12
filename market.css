@@ -147,6 +147,23 @@ body{
   color:#777;
 }
 
+.view-farmer{
+  display:block;
+  margin-top:15px;
+  text-align:center;
+  background:#111827;
+  color:white;
+  padding:12px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.view-farmer:hover{
+  background:#16a34a;
+}
+
 /* FOOTER */
 
 footer{

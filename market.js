@@ -94,20 +94,26 @@ function displayProducts(items){
 
         <div class="actions">
 
-          <a
-            href="tel:${product.phone}"
-            class="btn call"
-          >
-            📞 Call
-          </a>
+  <a href="tel:${product.phone}" class="btn call">
+    📞 Call
+  </a>
 
-          <a
-            href="https://wa.me/${product.phone}?text=Hello I want to buy your ${product.name}"
-            target="_blank"
-            class="btn whatsapp"
-          >
-            💬 WhatsApp
-          </a>
+  <a
+    href="https://wa.me/${product.phone}?text=Hello%20I%20want%20to%20buy%20your%20${product.name}"
+    target="_blank"
+    class="btn whatsapp"
+  >
+    💬 WhatsApp
+  </a>
+
+</div>
+
+<a 
+  href="farmer-profile.html?phone=${product.phone}"
+  class="view-farmer"
+>
+  View Farmer
+</a>
 
         </div>
 
